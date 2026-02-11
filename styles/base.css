@@ -1,0 +1,40 @@
+/* Reset do CSS para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis de Cores e Estilos Globais */
+:root {
+    /* Cores Base */
+    --bg-dark: #2F2325;
+    --rust: #A45A49;
+    --peach: #E68E7B;
+    --white: #FFFFFF;
+    --blue: #97D4D9;
+    --green: #B3DFD3;
+    --yellow: #EFC764;
+    --soft-pink: #FFF2E7;
+
+    /* Backgrounds */
+    --bg-primary: var(--bg-dark);
+    --bg-secondary: rgba(47, 35, 37, 0.9);
+    --bg-surface: var(--bg-dark);
+
+    /* Borders */
+    --border-color: var(--rust);
+
+    /* Textos */
+    --text-primary: var(--peach);
+    --text-secondary: var(--rust);
+    --text-muted: var(--soft-pink);
+
+    /* Outros */
+    --primary-color: var(--rust);
+    --secondary-color: var(--bg-dark);
+    --tertiary-color: var(--peach);
+    --accent-color: var(--peach);
+    --card-background: var(--bg-dark);
+    --gray-titles: var(--soft-pink);
+}

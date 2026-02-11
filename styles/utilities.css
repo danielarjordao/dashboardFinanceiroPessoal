@@ -1,0 +1,13 @@
+/*
+ * UTILITIES.CSS
+ * Classes utilitárias reutilizáveis
+ */
+
+/* Classes de cor para valores */
+.positivo {
+    color: var(--green);
+}
+
+.negativo {
+    color: var(--yellow);
+}

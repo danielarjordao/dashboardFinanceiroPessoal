@@ -1,0 +1,174 @@
+/* Histórico de transações (tabela) */
+
+/* Container principal do histórico */
+.historico {
+    background-color: var(--bg-surface);
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.7rem;
+    border: 0.06rem solid var(--border-color);
+    padding: 1.5rem;
+    width: 100%;
+}
+
+/* Subtítulo do histórico */
+.sub-titulo-historico {
+    color: var(--peach);
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Container da tabela */
+.table-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Cabeçalho da tabela */
+.cabecalho-tabela {
+    color: var(--peach);
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 0.06rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.2fr 1fr 1fr 0.5fr;
+    column-gap: 0.7rem;
+    padding: 0.6rem 1.2rem;
+	text-align: center;
+}
+
+/* Lista de transações */
+.lista-transacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Item individual da transação */
+.item-transacao {
+    background-color: var(--bg-surface);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.2fr 1fr 1fr 0.5fr;
+    column-gap: 0.7rem;
+    align-items: center;
+    border: 0.06rem solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 0.7rem 1.2rem;
+    transition: all 0.2s ease;
+}
+
+.item-transacao:hover {
+    border-color: var(--peach);
+    transform: translateX(4px);
+}
+
+/* Mensagem quando não há transações */
+.mensagem-vazia {
+    color: var(--rust);
+    text-align: center;
+    padding: 2rem;
+    font-style: italic;
+}
+
+/* Células individuais da transação */
+
+.data-transacao {
+    color: var(--gray-titles);
+    font-size: 0.75rem;
+	text-align: center;
+}
+
+.descricao-transacao {
+    color: var(--soft-pink);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.valor-transacao {
+    font-weight: bold;
+    text-align: right;
+    font-size: 0.85rem;
+	text-align: center;
+}
+
+.valor-transacao.positivo {
+    color: var(--green);
+}
+
+.valor-transacao.negativo {
+    color: var(--yellow);
+}
+
+.categoria-transacao {
+    color: var(--rust);
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+/* Etiquetas de tipo de transação */
+.etiqueta {
+    background-color: transparent;
+    display: inline-block;
+    border-radius: 0.2rem;
+    font-size: 0.65rem;
+    font-weight: bold;
+    padding: 0.15rem 0.4rem;
+    border: 1px solid;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* Etiqueta receita */
+.etiqueta-receita {
+    color: var(--green);
+    border-color: var(--green);
+}
+
+/* Etiqueta despesa */
+.etiqueta-despesa {
+    color: var(--yellow);
+    border-color: var(--yellow);
+}
+
+/* Botão de remover transação */
+.btn-remover {
+    background: transparent;
+    border: none;
+    color: var(--rust);
+    cursor: pointer;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.btn-remover:hover {
+    background-color: rgba(164, 90, 73, 0.2);
+    color: var(--peach);
+    transform: scale(1.1);
+}
+
+/* Rodapé da tabela */
+.rodape-tabela {
+    text-align: center;
+    margin-top: 1.2rem;
+}
+
+/* Link para ver mais no extrato completo */
+.link-extrato {
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.link-extrato:hover {
+    color: var(--soft-pink);
+}
+
