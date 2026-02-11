@@ -5,15 +5,26 @@ import {
     initCategorias,
     capturarDadosFormulario,
     limparFormulario,
-    getBotao,
-    renderizarTransacoes,
-} from './modules/userIterface.js';
+    getBotao
+} from './modules/form.js';
+import { renderizarTransacoes, atualizarCards } from './modules/userIterface.js';
 import { init, adicionarTransacao, getTransacoes } from './modules/state.js';
+import { calcularSaldo, calcularReceitas, calcularDespesas } from './modules/transactions.js';
 
 // Inicialização
 init(); // Carregar transações do localStorage
 initCategorias();
 initValidacoes();
+
+// Renderizar transações existentes ao carregar a página
+const transacoesIniciais = getTransacoes();
+renderizarTransacoes(transacoesIniciais);
+
+// Atualizar cards com valores iniciais
+const saldoInicial = calcularSaldo(transacoesIniciais);
+const receitasInicial = calcularReceitas(transacoesIniciais);
+const despesasInicial = calcularDespesas(transacoesIniciais);
+atualizarCards(saldoInicial, receitasInicial, despesasInicial);
 
 // EVENTO DO BOTÃO
 const botao = getBotao();
@@ -39,6 +50,12 @@ botao.addEventListener('click', (e) => {
     // 6) Re-renderizar UI.
     const transacoes = getTransacoes();
     renderizarTransacoes(transacoes);
+
+    // 6.1) Recalcular e atualizar cards
+    const saldo = calcularSaldo(transacoes);
+    const receitas = calcularReceitas(transacoes);
+    const despesas = calcularDespesas(transacoes);
+    atualizarCards(saldo, receitas, despesas);
 
     // 7) Limpar formulário.
     limparFormulario();

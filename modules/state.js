@@ -1,4 +1,4 @@
-import { salvar, carregar } from './storage.js';
+import { salvar, carregar} from './storage.js';
 
 // Array em memória (estado da aplicação)
 let transacoes = [];
@@ -6,7 +6,6 @@ let transacoes = [];
 // 1) Carregar as transações salvas quando o sistema iniciar.
 export function init() {
     transacoes = carregar();
-    console.log('Estado inicializado:', transacoes);
 }
 
 /*
@@ -28,6 +27,7 @@ export function adicionarTransacao(novaTransacao) {
     // Adicionar ID único baseado em timestamp
     const transacaoComId = {
         id: Date.now(),
+        // Spread operator para copiar as propriedades da novaTransacao
         ...novaTransacao
     };
 
@@ -36,15 +36,20 @@ export function adicionarTransacao(novaTransacao) {
 
     // Sincronizar com localStorage
     salvar(transacoes);
-
-    // Exibir no console
-    console.log('Transação adicionada:', transacaoComId);
 }
 
-// Limpar todas as transações (para teste)
+// Remover transação
+export function removerTransacao(id) {
+    // Filtrar o array para remover a transação com o ID correspondente
+    transacoes = transacoes.filter(transacao => transacao.id !== id);
+
+    // Sincronizar com localStorage após remoção
+    salvar(transacoes);
+}
+
+// Limpar todas as transações
 export function limparTodas() {
     transacoes = [];
     salvar(transacoes);
-    console.log('Todas as transações foram removidas');
 }
 

@@ -1,8 +1,3 @@
-/*
-OBJETIVO:
-Salvar e recuperar as transações no localStorage.
-*/
-
 // 1) Precisamos definir uma chave fixa para armazenar os dados.
 const chaveStorage = 'transacoes_financeiras';
 
@@ -35,7 +30,21 @@ export function carregar() {
     }
 
     // Se existir, converter de JSON para array de objetos
-    return JSON.parse(transacoesJSON);
+    const transacoes = JSON.parse(transacoesJSON);
+
+    // Corrigir valores que possam estar como string (dados antigos)
+    return transacoes.map(transacao => {
+        // Verificar se o valor é uma string
+        if (typeof transacao.valor === 'string') {
+            // Se for string, converter para número
+            return {
+                ...transacao,
+                valor: parseFloat(transacao.valor)
+            };
+        }
+        // Se já for número, retornar sem alteração
+        return transacao;
+    });
 }
 
 // Limpar todas as transações para teste
