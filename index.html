@@ -8,42 +8,14 @@
     <title>Dashboard Financeiro Pessoal</title>
 </head>
 <body>
-    <aside class="sidebar">
-        <p class="logo">Minhas Finanças</p>
-        <menu class="menu">
-            <ul class="lista-de-servicos">
-                <div class="containers-services first">
-                    <div class="list-icons"></div>
-                    <li class="menu-itens">Dashboard</li>
-                </div>
-                <div class="containers-services">
-                    <div class="list-icons"></div>
-                    <li class="menu-itens">Relatórios</li>
-                </div>
-                <div class="containers-services">
-                    <div class="list-icons"></div>
-                    <li class="menu-itens">Transações</li>
-                </div>
-                <div class="containers-services">
-                    <div class="list-icons"></div>
-                    <li class="menu-itens">Orçamentos</li>
-                </div>
-            </ul>
-        </menu>
-    </aside>
-
     <header class="header">
-        <div class="titulo-container">
-            <h2 class="titulo">Overview</h2>
-            <p class="subtitle">Bem vindo de volta, aqui está o que acontece com o seu dinheiro</p>
-        </div>
-        <div class="header-actions">
-            <div class="calendario">Jan 1- Jan 31, 2026</div>
-            <button class="exportar">Exportar</button>
-        </div>
+        <p class="logo">Minhas Finanças</p>
     </header>
 
     <main class="main">
+        <section class="dashboard-titulo">
+            <h3>Dashboard</h3>
+        </section>
         <section class="cards">
             <div class="cards-container">
                 <div class="card">
@@ -67,38 +39,40 @@
             <div class="nova-transacao">
                 <div class="titulo-nova-transacao-container">
                     <p class="titulo-nova-transacao">Nova Transação</p>
-                    <div class="nova-transacao-icon">+</div>
                 </div>
                 <div class="form-container">
-                    <div class="description-form">
-                        <form action="" class="receitas"></form>
+                    <div class="data-form field">
+                        <label for="data">Data</label>
+                        <input type="date" id="data">
+                        <span class="error"></span>
+                    </div>
+                    <div class="description-form field">
                         <label for="descricao">Descrição</label>
                         <input type="text" id="descricao" placeholder="ex. Renda mensal">
+                        <span class="error"></span>
                     </div>
                     <div class="qtd-tipo-transacao-container">
-                        <div class="qtd-container">
+                        <div class="qtd-container field">
                             <label for="quantidade">Valor</label>
-                            <input type="number" id="quantidade" placeholder="ex. 1000">
+                            <input type="text" id="quantidade" placeholder="ex. 1000">
+                            <span class="error"></span>
                         </div>
-                        <div class="tipo-transacao-container">
+                        <div class="tipo-transacao-container field">
                             <label for="tipo-transacao">Tipo</label>
                             <select name="tipo-transacao" id="tipo-transacao">
+                                <option value="">Selecione</option>
                                 <option value="receita">Receita</option>
                                 <option value="despesa">Despesa</option>
                             </select>
-
+                            <span class="error"></span>
                         </div>
                     </div>
-                </div>
-                <div class="categoria-container">
-                    <div class="categorias">Comida</div>
-                    <div class="categorias">Faturas</div>
-                    <div class="categorias">Salário</div>
-                </div>
-                <div class="categoria-container">
-                    <div class="categorias">Entretenimento</div>
-                    <div class="categorias">Lazer</div>
-                    <div class="categorias">Outros</div>
+                    <div class="categoria-container field">
+                        <label for="categoria">Categoria</label>
+                        <select name="categoria" id="categoria">
+                        </select>
+                        <span class="error"></span>
+                    </div>
                 </div>
                 <button class="adiciona-historia">
                     <div class="btn-container">
@@ -111,10 +85,11 @@
                 <h3 class="sub-titulo-historico">Histórico recente</h3>
                 <div class="table-container">
                     <div class="cabecalho-tabela">
-                        <span>TRANSAÇÃO</span>
-                        <span>CATEGORIA</span>
                         <span>DATA</span>
+                        <span>DESCRIÇÃO</span>
                         <span>VALOR</span>
+                        <span>TIPO</span>
+                        <span>CATEGORIA</span>
                     </div>
 
                     <div class="lista-transacoes"></div>
