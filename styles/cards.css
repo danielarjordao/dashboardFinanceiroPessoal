@@ -11,7 +11,7 @@
 
 /* Estilo individual de cada card */
 .card {
-    background-color: var(--bg-surface);
+    background: var(--bg-secondary);
     display: flex;
     flex-direction: column;
     border: 0.06rem solid var(--border-color);
@@ -32,13 +32,6 @@
     font-size: 1.5rem;
     font-weight: bold;
     margin-top: 0.2rem;
-}
-
-/* Informações adicionais (ex: variação percentual) */
-.informacao {
-    color: var(--rust);
-    font-size: 0.8rem;
-    margin-top: 0.5rem;
 }
 
 /* Cor específica para valores negativos (despesas) */

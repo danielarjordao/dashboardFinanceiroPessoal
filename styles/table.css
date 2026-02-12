@@ -2,7 +2,7 @@
 
 /* Container principal do histórico */
 .historico {
-    background-color: var(--bg-surface);
+
     display: flex;
     flex-direction: column;
     border-radius: 0.7rem;
@@ -49,7 +49,6 @@
 
 /* Item individual da transação */
 .item-transacao {
-    background-color: var(--bg-surface);
     display: grid;
     grid-template-columns: 1fr 2fr 1.2fr 1fr 1fr 0.5fr;
     column-gap: 0.7rem;
@@ -74,7 +73,6 @@
 }
 
 /* Células individuais da transação */
-
 .data-transacao {
     color: var(--gray-titles);
     font-size: 0.75rem;
