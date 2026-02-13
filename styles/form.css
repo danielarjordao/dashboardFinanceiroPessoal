@@ -5,7 +5,6 @@
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
-
     padding: 1.2rem;
     border-radius: 0.5rem;
     border: 0.06rem solid var(--border-color);
@@ -13,7 +12,7 @@
 
 /* Título do formulário */
 .titulo-nova-transacao {
-    color: var(--peach);
+    color: var(--text-primary);
     font-size: 0.9rem;
     font-weight: bold;
 	text-align: center;
@@ -32,7 +31,7 @@
 
 /* Estilo dos rótulos dos campos */
 .form-container label {
-    color: var(--peach);
+    color: var(--text-primary);
     font-size: 0.8rem;
 }
 
@@ -40,7 +39,7 @@
 .form-container input,
 .form-container select {
     background-color: transparent;
-    color: var(--peach);
+    color: var(--text-primary);
     border: 0.06rem solid var(--border-color);
     border-radius: 0.2rem;
     padding: 0.5rem;
@@ -50,12 +49,12 @@
 /* Estilo dos campos de entrada em estado de erro */
 .form-container input.input-error,
 .form-container select.input-error {
-	border-color: var(--yellow);
+	border-color: var(--danger-color);
 }
 
 /* Mensagem de erro */
 .error {
-	color: var(--yellow);
+	color: var(--danger-color);
     font-size: 0.7rem;
     min-height: 1rem;
     margin-top: 0.2rem;
@@ -67,6 +66,7 @@
     flex-direction: column;
     gap: 0.5rem;
 }
+
 
 /* Força tema escuro no calendário nativo para deixar o icone visível */
 input[type="date"] {
@@ -81,7 +81,7 @@ input[type="date"] {
 }
 
 /* Container para os campos de valor e tipo de transação (lado a lado) */
-.qtd-tipo-transacao-container {
+.valor-tipo-transacao-container {
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -89,13 +89,12 @@ input[type="date"] {
 }
 
 /* Container individual para o campo de valor e tipo de transação */
-.qtd-container,
+.valor-container,
 .tipo-transacao-container {
     display: flex;
     flex: 1;
     flex-direction: column;
     gap: 0.5rem;
-    min-width: 0;
 }
 
 /* Container para o campo de categoria */
@@ -107,8 +106,8 @@ input[type="date"] {
 
 /* Botão de adicionar transação */
 .adiciona-historia {
-    background-color: var(--rust);
-    color: var(--soft-pink);
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
     border: none;
     border-radius: 0.5rem;
     padding: 0.6rem 1.2rem;
@@ -117,13 +116,13 @@ input[type="date"] {
 }
 
 .adiciona-historia:hover {
-    background-color: var(--peach);
-    color: var(--bg-dark);
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
 }
 
 .adiciona-historia:disabled {
 
-    color: var(--rust);
+    color: var(--text-secondary);
     cursor: not-allowed;
     opacity: 0.5;
 }
@@ -135,4 +134,18 @@ input[type="date"] {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+}
+
+/* Responsividade mobile */
+@media (max-width: 767px) {
+    .valor-tipo-transacao-container {
+        flex-direction: row;
+    }
+}
+
+/* Responsividade tablet */
+@media (min-width: 700px) and (max-width: 1024px) {
+    .valor-tipo-transacao-container {
+        flex-direction: column;
+    }
 }

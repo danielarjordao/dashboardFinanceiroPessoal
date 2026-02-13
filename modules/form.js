@@ -21,7 +21,7 @@ const botao = document.querySelector('.adiciona-historia');
 // Elementos para exibir erros de validação no formulário
 const errorData = form?.querySelector('.data-form .error');
 const errorDescricao = form?.querySelector('.description-form .error');
-const errorValor = form?.querySelector('.qtd-container .error');
+const errorValor = form?.querySelector('.valor-container .error');
 const errorTipo = form?.querySelector('.tipo-transacao-container .error');
 const errorCategoria = form?.querySelector('.categoria-container .error');
 
@@ -117,7 +117,8 @@ export function capturarDadosFormulario() {
 		// Converter string para número
         valor: parseFloat(inputValor.value),
         tipo: inputTipo.value,
-        categoria: inputCategoria.value
+        // Captura o texto da opção selecionada para categoria
+        categoria: inputCategoria.options[inputCategoria.selectedIndex].text
     };
 }
 

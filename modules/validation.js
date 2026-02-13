@@ -6,8 +6,8 @@ export function validarDescricao(descricao) {
     if (descricao.length < 3) {
         return 'Descrição deve ter no mínimo 3 caracteres.';
     }
-    if (descricao.length > 100) {
-        return 'Descrição deve ter no máximo 100 caracteres.';
+    if (descricao.length > 25) {
+        return 'Descrição deve ter no máximo 25 caracteres.';
     }
     return '';
 }

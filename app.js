@@ -42,7 +42,6 @@ botao.addEventListener('click', (e) => {
         console.error('Formulário inválido:', resultado.erros);
         return;
     }
-    console.log('Transação válida:', dados);
 
     // 5) Atualizar estado.
     adicionarTransacao(dados);

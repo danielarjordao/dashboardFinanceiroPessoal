@@ -56,6 +56,7 @@ function criarElementoTransacao(transacao) {
     spanCategoria.className = 'categoria-transacao';
     spanCategoria.textContent = transacao.categoria;
 
+
     // Criar botão remover
     const btnRemover = criarBotaoRemover(transacao.id);
 

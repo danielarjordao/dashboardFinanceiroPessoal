@@ -22,13 +22,13 @@
 
 /* Título de cada card */
 .titulo-card {
-    color: var(--peach);
+    color: var(--text-primary);
     font-size: 0.9rem;
 }
 
 /* Valor principal do card */
 .valor {
-    color: var(--green);
+    color: var(--success-color);
     font-size: 1.5rem;
     font-weight: bold;
     margin-top: 0.2rem;
@@ -36,11 +36,11 @@
 
 /* Cor específica para valores negativos (despesas) */
 .expense-color {
-    color: var(--yellow);
+    color: var(--danger-color);
 }
 
 /* Responsividade - Cards em coluna única em telas pequenas */
-@media (max-width: 48rem) {
+@media (max-width: 767px) {
     .cards-container {
         grid-template-columns: 1fr;
     }

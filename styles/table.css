@@ -2,7 +2,6 @@
 
 /* Container principal do histórico */
 .historico {
-
     display: flex;
     flex-direction: column;
     border-radius: 0.7rem;
@@ -13,7 +12,7 @@
 
 /* Subtítulo do histórico */
 .sub-titulo-historico {
-    color: var(--peach);
+    color: var(--text-primary);
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
@@ -29,7 +28,7 @@
 
 /* Cabeçalho da tabela */
 .cabecalho-tabela {
-    color: var(--peach);
+    color: var(--text-primary);
     font-size: 0.7rem;
     font-weight: bold;
     letter-spacing: 0.06rem;
@@ -56,17 +55,15 @@
     border: 0.06rem solid var(--border-color);
     border-radius: 0.5rem;
     padding: 0.7rem 1.2rem;
-    transition: all 0.2s ease;
 }
 
 .item-transacao:hover {
-    border-color: var(--peach);
-    transform: translateX(4px);
+    border-color: var(--warning-color);
 }
 
 /* Mensagem quando não há transações */
 .mensagem-vazia {
-    color: var(--rust);
+    color: var(--text-secondary);
     text-align: center;
     padding: 2rem;
     font-style: italic;
@@ -74,13 +71,13 @@
 
 /* Células individuais da transação */
 .data-transacao {
-    color: var(--gray-titles);
+    color: var(--text-tertiary);
     font-size: 0.75rem;
 	text-align: center;
 }
 
 .descricao-transacao {
-    color: var(--soft-pink);
+    color: var(--text-tertiary);
     font-size: 0.85rem;
     font-weight: 500;
 }
@@ -93,15 +90,15 @@
 }
 
 .valor-transacao.positivo {
-    color: var(--green);
+    color: var(--success-color);
 }
 
 .valor-transacao.negativo {
-    color: var(--yellow);
+    color: var(--danger-color);
 }
 
 .categoria-transacao {
-    color: var(--rust);
+    color: var(--text-secondary);
     font-size: 0.75rem;
     text-align: center;
 }
@@ -121,34 +118,32 @@
 
 /* Etiqueta receita */
 .etiqueta-receita {
-    color: var(--green);
-    border-color: var(--green);
+    color: var(--success-color);
+    border-color: var(--success-color);
 }
 
 /* Etiqueta despesa */
 .etiqueta-despesa {
-    color: var(--yellow);
-    border-color: var(--yellow);
+    color: var(--danger-color);
+    border-color: var(--danger-color);
 }
 
 /* Botão de remover transação */
 .btn-remover {
     background: transparent;
-    border: none;
-    color: var(--rust);
-    cursor: pointer;
-    padding: 0.3rem;
+    color: var(--text-primary);
+    border-color: var(--border-color);
     border-radius: 0.3rem;
+    padding: 0.1rem;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s ease;
 }
 
 .btn-remover:hover {
-    background-color: rgba(164, 90, 73, 0.2);
-    color: var(--peach);
-    transform: scale(1.1);
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
 }
 
 /* Rodapé da tabela */
@@ -159,7 +154,7 @@
 
 /* Link para ver mais no extrato completo */
 .link-extrato {
-    color: var(--blue);
+    color: var(--warning-color);
     text-decoration: none;
     font-size: 0.8rem;
     font-weight: bold;
@@ -167,6 +162,6 @@
 }
 
 .link-extrato:hover {
-    color: var(--soft-pink);
+    color: var(--text-tertiary);
 }
 

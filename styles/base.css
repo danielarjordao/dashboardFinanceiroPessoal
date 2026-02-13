@@ -20,7 +20,7 @@
     /* Backgrounds */
     --bg-primary: var(--bg-dark);
     --bg-secondary: rgba(164, 90, 73, 0.3);
-    --bg-tertiary: var(--rust);
+    --bg-tertiary:  rgba(230, 142, 123, 0.3);
 
 
     /* Borders */
@@ -29,13 +29,10 @@
     /* Textos */
     --text-primary: var(--peach);
     --text-secondary: var(--rust);
-    --text-muted: var(--soft-pink);
+    --text-tertiary: var(--soft-pink);
 
     /* Outros */
-    --primary-color: var(--rust);
-    --secondary-color: var(--bg-dark);
-    --tertiary-color: var(--peach);
-    --accent-color: var(--peach);
-    --card-background: var(--bg-dark);
-    --gray-titles: var(--soft-pink);
+    --success-color: var(--green);
+    --warning-color: var(--blue);
+    --danger-color: var(--yellow);
 }
