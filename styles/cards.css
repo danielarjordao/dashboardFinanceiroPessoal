@@ -11,7 +11,6 @@
 
 /* Estilo individual de cada card */
 .card {
-    background: var(--bg-secondary);
     display: flex;
     flex-direction: column;
     border: 0.06rem solid var(--border-color);
