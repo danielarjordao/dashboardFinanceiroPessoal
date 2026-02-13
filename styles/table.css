@@ -33,7 +33,7 @@
     font-weight: bold;
     letter-spacing: 0.06rem;
     display: grid;
-    grid-template-columns: 1fr 2fr 1.2fr 1fr 1fr 0.5fr;
+    grid-template-columns: 1fr 2fr 1.2fr 1fr 1fr 1rem;
     column-gap: 0.7rem;
     padding: 0.6rem 1.2rem;
 	text-align: center;
@@ -49,7 +49,7 @@
 /* Item individual da transação */
 .item-transacao {
     display: grid;
-    grid-template-columns: 1fr 2fr 1.2fr 1fr 1fr 0.5fr;
+    grid-template-columns: 1fr 2fr 1.2fr 1fr 1fr 1rem;
     column-gap: 0.7rem;
     align-items: center;
     border: 0.06rem solid var(--border-color);
@@ -144,24 +144,5 @@
 .btn-remover:hover {
     background-color: var(--bg-tertiary);
     color: var(--text-primary);
-}
-
-/* Rodapé da tabela */
-.rodape-tabela {
-    text-align: center;
-    margin-top: 1.2rem;
-}
-
-/* Link para ver mais no extrato completo */
-.link-extrato {
-    color: var(--warning-color);
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.link-extrato:hover {
-    color: var(--text-tertiary);
 }
 

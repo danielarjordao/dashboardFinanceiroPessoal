@@ -52,13 +52,12 @@ export function initCategorias() {
     const categorias = [
         { valor: 'salario', texto: 'Salário' },
         { valor: 'investimentos', texto: 'Investimentos' },
-        { valor: 'freelance', texto: 'Freelance' },
-        { valor: 'lazer', texto: 'Lazer' },
-        { valor: 'alimentacao', texto: 'Alimentação' },
         { valor: 'moradia', texto: 'Moradia' },
-        { valor: 'transporte', texto: 'Transporte' },
+        { valor: 'alimentacao', texto: 'Alimentação' },
         { valor: 'saude', texto: 'Saúde' },
+        { valor: 'transporte', texto: 'Transporte' },
         { valor: 'educacao', texto: 'Educação' },
+        { valor: 'lazer', texto: 'Lazer' },
         { valor: 'outros', texto: 'Outros' }
     ];
 
