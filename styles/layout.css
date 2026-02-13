@@ -13,7 +13,6 @@ body {
 
 .header {
     grid-area: header;
-    background: var(--bg-secondary);
     border-bottom: var(--border-color) solid 0.01rem;
     padding: 1.2rem;
     display: flex;
