@@ -6,8 +6,8 @@ export function validarDescricao(descricao) {
     if (descricao.length < 3) {
         return 'Descrição deve ter no mínimo 3 caracteres.';
     }
-    if (descricao.length > 25) {
-        return 'Descrição deve ter no máximo 25 caracteres.';
+    if (descricao.length > 50) {
+        return 'Descrição deve ter no máximo 50 caracteres.';
     }
     return '';
 }
@@ -21,8 +21,8 @@ export function validarValor(valor) {
     if (valorNumerico <= 0) {
         return 'Valor deve ser maior que zero.';
     }
-    if (valorNumerico > 1000000) {
-        return 'Valor não pode ultrapassar 1.000.000.';
+    if (valorNumerico > 9999999.99) {
+        return 'Valor não pode ultrapassar 9.999.999,99';
     }
     return '';
 }

@@ -135,17 +135,3 @@ input[type="date"] {
     align-items: center;
     gap: 0.5rem;
 }
-
-/* Responsividade mobile */
-@media (max-width: 767px) {
-    .valor-tipo-transacao-container {
-        flex-direction: row;
-    }
-}
-
-/* Responsividade tablet */
-@media (min-width: 700px) and (max-width: 1024px) {
-    .valor-tipo-transacao-container {
-        flex-direction: column;
-    }
-}

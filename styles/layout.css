@@ -32,19 +32,30 @@ body {
 
 .main {
     grid-area: main;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 25rem 2fr;
+    grid-template-areas:
+        "sidebar dashboard"
+        "sidebar transacoes";
     justify-content: center;
     padding: 2rem;
     gap: 2rem;
 }
 
+.sidebar{
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cards {
+    grid-area: dashboard;
+}
+
 /* Seções de adição de cards e transações */
 .transacoes {
-    display: grid;
-    align-items: start;
-    grid-template-columns: minmax(16rem, 22rem) 1fr;
+    grid-area: transacoes;
     gap: 2rem;
     width: 100%;
 }
@@ -57,8 +68,12 @@ body {
 }
 
 /* Responsividade mobile */
-@media (max-width: 767px) {
-    .transacoes {
+@media (max-width: 1024px) {
+    .main {
         grid-template-columns: 1fr;
+        grid-template-areas:
+            "dashboard"
+            "sidebar"
+            "transacoes";
     }
 }

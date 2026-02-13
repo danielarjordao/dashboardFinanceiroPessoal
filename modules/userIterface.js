@@ -21,6 +21,10 @@ export function renderizarTransacoes(transacoes) {
    - Criar elemento HTML dinamicamente.
    - Inserir no DOM.
     */
+    // Ordenar por data (mais recente primeiro)
+    transacoes.sort(function(a, b) {
+        return new Date(b.data) - new Date(a.data);
+    });
     transacoes.forEach(transacao => {
         const itemTransacao = criarElementoTransacao(transacao);
         listaTransacoes.appendChild(itemTransacao);
